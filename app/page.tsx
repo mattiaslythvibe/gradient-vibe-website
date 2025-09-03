@@ -44,7 +44,7 @@ export default function HomePage() {
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 flex flex-col justify-center min-h-[calc(100vh-120px)] px-6 lg:px-12">
+      <main className="relative z-10 flex flex-col justify-center min-h-[calc(100vh-200px)] px-6 lg:px-12 -mt-16">
         <div className="max-w-2xl">
           <h1 className="text-5xl lg:text-7xl font-light text-white mb-6 leading-tight">
             Replace Legacy. Build for the Future.
