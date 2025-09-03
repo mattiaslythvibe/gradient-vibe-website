@@ -42,6 +42,14 @@ export default function HomePage() {
           </nav>
         </div>
         <div className="flex items-center space-x-4">
+          <Button
+            variant="outline"
+            className={`border-white/30 text-white hover:bg-white/10 hover:text-white bg-transparent ${
+              isMobile && isMobileMenuOpen ? "hidden" : ""
+            }`}
+          >
+            Contact
+          </Button>
           {isMobile && (
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -51,14 +59,6 @@ export default function HomePage() {
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           )}
-          <Button
-            variant="outline"
-            className={`border-white/30 text-white hover:bg-white/10 hover:text-white bg-transparent ${
-              isMobile && isMobileMenuOpen ? "hidden" : ""
-            }`}
-          >
-            Contact
-          </Button>
         </div>
       </header>
 
