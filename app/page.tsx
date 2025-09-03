@@ -16,7 +16,7 @@ export default function HomePage() {
       </div>
 
       {/* Header */}
-      <header className="relative z-10 flex items-center justify-between px-6 py-6 lg:px-12">
+      <header className="relative z-10 flex items-center justify-between px-6 py-6 lg:px-16">
         <div className="flex items-center space-x-12">
           <div className="flex items-center">
             <Image src="/logo.svg" alt="Gradient Vibe" width={60} height={33} className="h-8 w-auto" />
@@ -44,7 +44,7 @@ export default function HomePage() {
       </header>
 
       {/* Main Content */}
-      <main className="relative z-10 flex flex-col justify-center min-h-[calc(100vh-200px)] px-6 lg:px-12 -mt-16">
+      <main className="relative z-10 flex flex-col justify-center min-h-[calc(100vh-200px)] px-6 lg:px-16 -mt-16">
         <div className="max-w-2xl">
           <h1 className="text-5xl lg:text-7xl font-light text-white mb-6 leading-tight">
             Replace Legacy. Build for the Future.
@@ -60,7 +60,7 @@ export default function HomePage() {
       </main>
 
       {/* Bottom Quote */}
-      <div className="absolute bottom-24 left-6 lg:left-12 z-10">{/* Placeholder for bottom quote */}</div>
+      <div className="absolute bottom-24 left-6 lg:left-16 z-10">{/* Placeholder for bottom quote */}</div>
 
       {/* Footer */}
       <footer className="absolute bottom-0 left-0 right-0 z-10 pb-6">
