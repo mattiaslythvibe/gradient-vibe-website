@@ -103,7 +103,7 @@ export default function HomePage() {
       {/* Main Content */}
       <main className="relative z-10 flex flex-col justify-center min-h-[calc(100vh-200px)] px-6 lg:px-24 -mt-16">
         <div className="max-w-2xl">
-          <h1 className="text-5xl lg:text-7xl font-light text-white mb-6 leading-tight">
+          <h1 className="text-5xl lg:text-7xl font-inter font-light text-white mb-6 leading-tight">
             Replace Legacy. Build for the Future.
           </h1>
           <p className="text-white/80 text-lg mb-8 leading-relaxed max-w-lg">

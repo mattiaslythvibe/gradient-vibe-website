@@ -2,10 +2,16 @@ import type React from "react"
 import type { Metadata } from "next"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
-import { Orbitron, Pacifico } from "next/font/google"
+import { Orbitron, Pacifico, Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+})
 
 const orbitron = Orbitron({
   subsets: ["latin"],
@@ -34,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${orbitron.variable} ${pacifico.variable}`}
+        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${orbitron.variable} ${pacifico.variable} ${inter.variable}`}
       >
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />

@@ -77,6 +77,8 @@
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  /* Adding Inter font variable for heading typography */
+  --font-inter: var(--font-inter);
   /* Adding font variables for Orbitron and Pacifico */
   --font-orbitron: var(--font-orbitron);
   --font-pacifico: var(--font-pacifico);
