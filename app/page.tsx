@@ -6,7 +6,7 @@ export default function HomePage() {
     <div className="min-h-screen relative overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:bg-center bg-[85%_85%]"
+        className="absolute inset-0 bg-cover bg-right bg-no-repeat md:bg-center"
         style={{
           backgroundImage:
             "url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/a0bb4ef3-b580-442d-b95a-766afba19dae%20-%20Copy.jpg-fWPXGpzEWRBnniFrcel5O4u4jlUdaS.jpeg')",
