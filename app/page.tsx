@@ -1,7 +1,15 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { useIsMobile } from "@/hooks/use-mobile"
+import { useState } from "react"
+import { Menu, X } from "lucide-react"
 
 export default function HomePage() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const isMobile = useIsMobile()
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Background Image */}
@@ -34,14 +42,63 @@ export default function HomePage() {
           </nav>
         </div>
         <div className="flex items-center space-x-4">
+          {isMobile && (
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 text-white hover:text-white/80 transition-colors"
+              aria-label="Toggle mobile menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          )}
           <Button
             variant="outline"
-            className="border-white/30 text-white hover:bg-white/10 hover:text-white bg-transparent"
+            className={`border-white/30 text-white hover:bg-white/10 hover:text-white bg-transparent ${
+              isMobile && isMobileMenuOpen ? "hidden" : ""
+            }`}
           >
             Contact
           </Button>
         </div>
       </header>
+
+      {isMobile && isMobileMenuOpen && (
+        <div className="fixed inset-0 z-20 bg-black/90 backdrop-blur-sm">
+          <div className="flex flex-col items-center justify-center h-full space-y-8">
+            <nav className="flex flex-col items-center space-y-6">
+              <a
+                href="#"
+                className="text-white text-2xl font-light hover:text-white/80 transition-colors py-3 px-6"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Portfolio
+              </a>
+              <a
+                href="#"
+                className="text-white text-2xl font-light hover:text-white/80 transition-colors py-3 px-6"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Insights
+              </a>
+              <a
+                href="#"
+                className="text-white text-2xl font-light hover:text-white/80 transition-colors py-3 px-6"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About
+              </a>
+            </nav>
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-white/30 text-white hover:bg-white/10 hover:text-white bg-transparent mt-8 px-8 py-3"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact
+            </Button>
+          </div>
+        </div>
+      )}
 
       {/* Main Content */}
       <main className="relative z-10 flex flex-col justify-center min-h-[calc(100vh-200px)] px-6 lg:px-24 -mt-16">
